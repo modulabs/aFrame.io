@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Entity Practice 20160310</title>
+    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene stats="true">
+      <a-camera position="0 1.8 4" cursor-color="black">
+      </a-camera>
+      <a-entity id="idl"
+              geometry="primitive: box; width: 1; depth: 1; height: 1"
+              material="color: red">
+        <mouseenter material="color: yellow">
+        </mouseenter>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

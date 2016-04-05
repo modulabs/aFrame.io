@@ -1,0 +1,21 @@
+<!doc html>
+<html>
+    <head>
+        <title>light practice 20160324</title>
+        <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-light rotation="0 0 90" type="directional">                
+                <a-animation attribute="rotation"
+                             to="0 360 90"
+                             dur="5000"
+                             easing="linear"
+                             repeat="indefinite">
+                </a-animation>
+            </a-light>
+            <a-sphere position="0 0 -1"></a-sphere>
+            <a-plane rotation="90 0 0" position="0 -1 -1"></a-plane>
+        </a-scene>
+    </body>
+</html>

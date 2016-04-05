@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Mouse Practice</title>
+        <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene id="scene">
+            <a-camera position="0 1.8 4"
+                      cursor-color="black">
+            </a-camera>
+            <a-cube id="cube" color="gray" position="-2 0 0"></a-cube>
+        </a-scene>
+    </body>
+    <script>
+        var cube = document.getElementById("cube")
+        cube.onmouseenter = function() {
+            this.setAttribute("color", "orange")
+            this.setAttribute("depth", "3")
+        }
+        cube.onmouseleave = function() {
+            this.setAttribute("color", "gray")
+            this.setAttribute("depth", "1.5")
+        }
+        
+        var scene = document.getElementById("scene")
+        for(var i = 0; i < 10; i++) {
+            var cube = document.createElement("a-cube")
+            scene.appendChild(cube)
+        }
+    </script>
+</html>
